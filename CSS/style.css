@@ -512,7 +512,6 @@ footer{
     .linguagens{
         display: flex;
         margin: 1rem;
-        width: 300px;
     }
     
     .linguagens img{
