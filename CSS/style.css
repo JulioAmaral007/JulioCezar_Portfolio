@@ -424,14 +424,14 @@ footer{
     display: flex;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:500px){
     body{
         width: 100vw;
     }
 
     header{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         background-color: white;
         width: 100vw;
         z-index: 500;
@@ -440,6 +440,7 @@ footer{
     
     .logo img{
         width: 6rem;
+        margin-right: 1rem;
     }
     
     ul{
@@ -467,11 +468,11 @@ footer{
         border-radius: 40%;
         width: 50%;
         height: 50%;
-        margin-left: 11rem;
+        margin-left: 7rem;
     }
     
     .home-mobile aside{
-        margin-left: 9rem;
+        margin-left: 6rem;
         margin-right: -4rem;
         font-family: var(--font-primary);
         font-size: 20px;
