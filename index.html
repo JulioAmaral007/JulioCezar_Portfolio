@@ -26,10 +26,10 @@
 </head>
 <body>
 
-  <div class="desktop">
+
     <header>
-      <div id="title">
-        <a href="#home"><h1 id="title">Júlio Cezar</h1></a>
+      <div class="logo">
+        <a href="#home"><img src="Images/logo.png"></a>
       </div>
       <nav>
         <ul>
@@ -37,15 +37,18 @@
           <a href="#about"><li>About</li></a>
           <a href="#skills"><li>Skills</li></a>
           <a href="#works"><li>Works</li></a>
-          <a href="#contact"><li>Contact</li></a>
+          <!--<a href="#contact"><li>Contact</li></a>-->
         </ul>
     </nav>
     </header>
 
     <section class="home" id="home">
       <aside>
-        <h1>Olá, <br> Sou o <span>Júlio Cezar</span> <br> Front-end Developer</h1>
-        <button>Contact</button>
+        <h1>Olá, <br> Sou o <span class="line typing-animation">Júlio Cezar</span> <br> Front-end Developer</h1>
+        <ul>
+          <li><a target="_blank" href="https://github.com/JulioAmaral007"><i class="fab fa-github"></i></a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/julio-cezar-amaral-pereira-19244b22a/"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
       </aside>
       
       <img src="Images/perfil01.jpg">
@@ -59,7 +62,11 @@
         <img src="Images/proj1.jpg"/>
         <div class="text">
           <h3>Eu sou o Júlio Cezar</h3>
-          <p>Sou graduando em Engenharia de Controle e Automação/Mecatrônica no IFSC - Campus Criciúma e atualmente sou Diretor Geral na Empresa Júnior MAJ.
+          <p>Sou Estudante de Desenvolvimento de Software e Graduando em Engenharia Mecatrônica no IFSC - Campus Criciúma, atualmente sou Diretor Geral na Empresa Júnior MAJ.
+             Apesar de estar no ínicio do curso procuro oportunidades de estágios para adquirir experiência e enriquecer minha formação profissional.
+             Desde que me entendo por pessoa sempre tive muita vontade de criar, inventar. É por isso que a tecnologia me fascina tanto. Aprender a programar me tornou capaz
+             de executar as ideias que tenho em mente. 
+             Já realizei trabalhos de programação front-end, disponíveis na sessão Works.
           </p>
         </div>
       </div>
@@ -72,7 +79,9 @@
       <div class="linguagens">
         <div class="text2">
           <h3>Habilidades Profissionais</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          <p>Sou uma pessoa proativa, de fácil adaptação e flexibilização para a percepção cognitiva, com potencial de 
+            assimilação e discernimento das questões apresentadas no dia a dia, com soluções rápidas, adequadas e úteis. Prezo pela disciplina e respeito aos princípios morais 
+            e profissionais, possuo fácil interação interpessoal, com desenvolvimento do senso de liderança e espírito de equipe. Linguagens utilizadas atualmente <i class="fa-solid fa-arrow-down"></i>
           </p>
             <div class="skills__data">
               <div class="skills__names">
@@ -118,7 +127,7 @@
               </div>
             </div>
 
-            <div class="skills__data">
+            <!--<div class="skills__data">
               <div class="skills__names">
                   <i class="fa-brands fa-php skills__icon"></i>
                   <span class="skills__name">PHP</span>
@@ -127,7 +136,7 @@
               <div>
                   <span class="skills__percentage">05%</span>
               </div>
-            </div>
+            </div>-->
 
         </div>
         <img src="Images/work3.jpg"/>
@@ -140,15 +149,16 @@
       </div>
 
       <div class="projects">
+
         <div class="card">
           <div class="card-img-wrapper">
-            <img src="Images/To-DoList.jpg" />
+            <img src="Images/ToDoList.png" />
           </div>
           <div class="card-info">
             <h2>To-Do List</h2>
             <h3>Javascript</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ducimus vero maxime amet magnam doloribus eos consequatur expedita architecto hic?</p>
-            <a href="https://julioamaral007.github.io/To-DoList/" target="_blank"><button class="btn">Saiba Mais</button></a>
+            <p>Um gerenciador de tarefas feito com JavaScript ótimo para se organizar.</p>
+            <a href="https://julioamaral007.github.io/To-DoList/" target="_blank"><button class="btn">Visualizar</button></a>
           </div>
         </div>
 
@@ -159,8 +169,8 @@
           <div class="card-info">
             <h2>Pokedex</h2>
             <h3>HTML, CSS e JavaScript</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, vero aliquam? Pariatur libero voluptas ipsam ullam consectetur ab facilis cumque.</p>
-            <a href="https://julioamaral007.github.io/GamePokedex/" target="_blank"><button class="btn">Saiba Mais</button></a>
+            <p>Projeto realizado em JavaScript consumindo uma API de Pokémon.</p>
+            <a href="https://julioamaral007.github.io/GamePokedex/" target="_blank"><button class="btn">Visualizar</button></a>
           </div>
         </div>
 
@@ -171,255 +181,75 @@
           <div class="card-info">
             <h2>Sign-Up</h2>
             <h3>HTML, CSS</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est pariatur soluta doloremque tempore nisi placeat, eveniet voluptate recusandae. Eius, sapiente?</p>
-            <a href="https://julioamaral007.github.io/Sign-Up/" target="_blank"><button class="btn">Saiba Mais</button></a>
+            <p>Projeto de Landing-Page com HTML e CSS puro.</p>
+            <a href="https://julioamaral007.github.io/Sign-Up/" target="_blank"><button class="btn">Visualizar</button></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="Images/C6Bank.png" />
+          </div>
+          <div class="card-info">
+            <h2>C6 Bank- Card</h2>
+            <h3>HTML, CSS</h3>
+            <p>Criação e animação de um cartão com HTML, CSS e JavaScript</p>
+            <a href="https://julioamaral007.github.io/C6Bank/" target="_blank"><button class="btn">Visualizar</button></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="Images/EmBreve....png" />
+          </div>
+          <div class="card-info">
+            <h2>Em Breve...</h2>
+            <h3>React</h3>
+            <p>Projeto sendo realizado em ReactJS.</p>
+            <a href="#" target="_blank"><button class="btn">Visualizar</button></a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <section class="contact" id="contact">
+  <!--  <section class="contact" id="contact">
       <div class="title">
         <h2>Contact</h2>
       </div>
       <div class="container">
         <div class="contato-wrapper">
-            <form>
+            <form method="POST" action="enviar.php">
               <div class="input-group">
-                <input type="text" class="field" id="nome">
+                <input type="text" class="field" name="nome" id="nome">
                 <label for="nome" class="field-label">Nome</label>
               </div>
               <div class="input-group">
-                <input type="text" class="field" id="email">
+                <input type="text" class="field" name="email" id="email" required>
                 <label for="email" class="field-label">E-mail</label>
               </div>
               <div class="input-group">
-                <textarea class="field" id="mensagem"></textarea>
+                <textarea class="field" name="mensagem" id="mensagem" required></textarea>
                 <label for="mensagem" class="field-label">Mensagem</label>
               </div>
               <button type="submit" class="btn btn-submit">Enviar</button>
             </form>
         </div>
       </div>
-  </section>
+  </section>-->
 
     <footer>
       <div class="footer-content">
         <p>&copy; 2022 copyright all right reserved</p>
         <div class="social-list">
           <ul>
-            <li><a href="https://www.instagram.com/julioczr_19/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://github.com/JulioAmaral007"><i class="fab fa-github"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/julioczr_19/"><i class="fab fa-instagram"></i></a></li>
+            <li><a target="_blank" href="https://github.com/JulioAmaral007"><i class="fab fa-github"></i></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/julio-cezar-amaral-pereira-19244b22a/"><i class="fa-brands fa-linkedin"></i></a></li>
           </ul>
         </div>
       </div>
     </footer>
-  </div>
-
-  <div class="mobile">
-    <header>
-      <div class="hamburguer">
-        <div class="line" id="line1"></div>
-        <div class="line" id="line2"></div>
-        <div class="line" id="line3"></div>
-        <span>fechar</span>
-      </div> 
-
-      <aside>
-        <nav>
-          <ul class="menu">
-            <a class="menu-link" href="#home"><li class="menu-item">Home</li></a>
-            <a class="menu-link" href="#about"><li class="menu-item">About</li></a>
-            <a class="menu-link" href="#skills"><li class="menu-item">Skills</li></a>
-            <a class="menu-link" href="#works"><li class="menu-item">Works</li></a>
-            <a class="menu-link" href="#contact"><li class="menu-item">Contact</li></a>
-          </ul>
-      </nav>
-      <div class="social-media">
-        <a href="#"><i class="fab fa-github-alt"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </aside>
-
-    </header>
-
-    <section class="home" id="home">
-      <aside>
-        <h1>Olá, <br> Sou o <span>Júlio Cezar</span> <br> Front-end Developer</h1>
-        <button>Contact</button>
-      </aside>
-      
-      <img src="Images/perfil01.jpg">
-    </section>
-<!--
-    <section class="about" id="about">
-      <div class="title">
-        <h2>About</h2>
-      </div>
-      <div class="sobre-mim">
-        <img src="Images/proj1.jpg"/>
-        <div class="text">
-          <h3>Eu sou o Júlio Cezar</h3>
-          <p>Sou graduando em Engenharia de Controle e Automação/Mecatrônica no IFSC - Campus Criciúma e atualmente sou Diretor Geral na Empresa Júnior MAJ.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills" id="skills">
-      <div class="title">
-        <h2>Skills</h2>
-      </div>
-      <div class="linguagens">
-        <div class="text2">
-          <h3>Habilidades Profissionais</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-          </p>
-            <div class="skills__data">
-              <div class="skills__names">
-                  <i class="fab fa-html5 skills__icon"></i>
-                  <span class="skills__name">HTML5</span>
-              </div>
-              <div class="skills__bar skills__html"></div>
-              <div>
-                  <span class="skills__percentage">80%</span>
-              </div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                  <i class="fab fa-css3-alt skills__icon"></i>
-                  <span class="skills__name">CSS</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                  <span class="skills__percentage">75%</span>
-              </div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                  <i class="fab fa-js-square skills__icon"></i>
-                  <span class="skills__name">JavaScript</span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                  <span class="skills__percentage">50%</span>
-              </div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                  <i class="fab fa-react skills__icon"></i>
-                  <span class="skills__name">React</span>
-              </div>
-              <div class="skills__bar skills__react"></div>
-              <div>
-                  <span class="skills__percentage">15%</span>
-              </div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                  <i class="fa-brands fa-php skills__icon"></i>
-                  <span class="skills__name">PHP</span>
-              </div>
-              <div class="skills__bar skills__php"></div>
-              <div>
-                  <span class="skills__percentage">05%</span>
-              </div>
-            </div>
-
-        </div>
-        <img src="Images/work3.jpg"/>
-      </div>
-    </section>
-
-    <section class="works" id="works">
-      <div class="title">
-        <h2>Works</h2>
-      </div>
-
-      <div class="projects">
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="Images/To-DoList.jpg" />
-          </div>
-          <div class="card-info">
-            <h2>To-Do List</h2>
-            <h3>Javascript</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ducimus vero maxime amet magnam doloribus eos consequatur expedita architecto hic?</p>
-            <a href="https://julioamaral007.github.io/To-DoList/" target="_blank"><button class="btn">Saiba Mais</button></a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="Images/Pokedex.jpg" />
-          </div>
-          <div class="card-info">
-            <h2>Pokedex</h2>
-            <h3>HTML, CSS e JavaScript</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, vero aliquam? Pariatur libero voluptas ipsam ullam consectetur ab facilis cumque.</p>
-            <a href="https://julioamaral007.github.io/GamePokedex/" target="_blank"><button class="btn">Saiba Mais</button></a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="Images/Sign-Up.png" />
-          </div>
-          <div class="card-info">
-            <h2>Sign-Up</h2>
-            <h3>HTML, CSS</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est pariatur soluta doloremque tempore nisi placeat, eveniet voluptate recusandae. Eius, sapiente?</p>
-            <a href="https://julioamaral007.github.io/Sign-Up/" target="_blank"><button class="btn">Saiba Mais</button></a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="title">
-        <h2>Contact</h2>
-      </div>
-      <div class="container">
-        <div class="contato-wrapper">
-            <form>
-              <div class="input-group">
-                <input type="text" class="field" id="nome">
-                <label for="nome" class="field-label">Nome</label>
-              </div>
-              <div class="input-group">
-                <input type="text" class="field" id="email">
-                <label for="email" class="field-label">E-mail</label>
-              </div>
-              <div class="input-group">
-                <textarea class="field" id="mensagem"></textarea>
-                <label for="mensagem" class="field-label">Mensagem</label>
-              </div>
-              <button type="submit" class="btn btn-submit">Enviar</button>
-            </form>
-        </div>
-      </div>
-  </section>
-
-    <footer>
-      <div class="footer-content">
-        <p>&copy; 2022 copyright all right reserved</p>
-        <div class="social-list">
-          <ul>
-            <li><a href="https://www.instagram.com/julioczr_19/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://github.com/JulioAmaral007"><i class="fab fa-github"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>-->
-  </div>
     
 </body>
 </html>

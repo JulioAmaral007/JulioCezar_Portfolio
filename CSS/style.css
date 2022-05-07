@@ -20,16 +20,18 @@ html{
 
 /*--- HEADER ---*/
 
-.desktop{
-    height: 100vh;
-}
-
 header{
     display: flex;
     justify-content: space-between;
     background-color: white;
     width: 100%;
     z-index: 500;
+    position: fixed;
+}
+
+.logo img{
+    width: 8rem;
+    margin: .5rem 0 .5rem 3rem;
 }
 
 #title{
@@ -65,7 +67,6 @@ ul a:hover{
 
 .home{
     display: flex;
-    flex-direction: row;
 }
 
 .home aside{
@@ -80,7 +81,7 @@ ul a:hover{
     font-size: 60px;
 }
 
-.home h1 span{
+.line{
     color: dodgerblue;
 }
 
@@ -92,7 +93,18 @@ ul a:hover{
     margin: 3rem 2rem 0 9rem;
 }
 
-.home aside button{
+.home a{
+    color: black;
+    font-size: 1.3rem;
+}
+  
+.home ul {
+    margin: 5rem;
+    justify-content: flex-start;
+    display: flex;
+}
+
+/*.home aside button{
     border-radius: 10px;
     color: white;
     background-color: blue;
@@ -107,7 +119,7 @@ ul a:hover{
 .home button:hover{
     cursor: pointer;
     opacity: .8;
-}
+}*/
 
 /*--- ABOUT ---*/
 
@@ -217,12 +229,14 @@ ul a:hover{
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
   
 .card {
     width: 18rem;
     height: 25rem;
     position: relative;
+    margin: 1rem 2rem 1rem 1rem;
 }
   
 .card-img-wrapper {
@@ -410,148 +424,6 @@ footer{
     display: flex;
 }
 
-.mobile{
-    visibility: hidden;
-}
-
-@media screen and (max-width: 700px){
-    .desktop{
-        visibility: hidden;
-    }
-
-    .mobile{
-        visibility: visible;
-    }
-
-    html{
-        scroll-behavior: smooth;
-    }
-    
-    a{
-        text-decoration: none;
-    }
-
-    .hamburguer {
-        /* background-color: red; */
-        width: 2rem;
-        height: 2rem;
-        position: fixed;
-        z-index: 100;
-        right: 3rem;
-        top: 4rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        cursor: pointer;
-    }
-      
-    .show-menu .hamburguer {
-        right: 12rem;
-    }
-      
-    .line {
-        width: 100%;
-        height: 0.1rem;
-        background-color: #fff;
-        box-shadow: 0.1rem 0.1rem 1px #000;
-        transition: transform 1s;
-    }
-      
-    .show-menu #line1 {
-        transform: rotate(45deg) translate(0.3rem, 0.45rem);
-    }
-
-    .show-menu #line2 {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .show-menu #line3 {
-        transform: rotate(-45deg) translate(0.3rem, -0.45rem);
-    }
-      
-    .hamburguer span {
-        position: absolute;
-        left: 3rem;
-        height: 2rem;
-        width: 6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: dodgerblue;
-        color: white;
-        font-family: var(--font-action);
-        opacity: 0;
-    }
-      
-    .hamburguer span::before {
-        content: "";
-        position: absolute;
-        border-right: 0.5rem solid dodgerblue;
-        border-top: 0.5rem solid transparent;
-        border-left: 0.5rem solid transparent;
-        border-bottom: 0.5rem solid transparent;
-        left: -1rem;
-    }
-
-    aside {
-        width: 17rem;
-        height: 100vh;
-        background-color: #fff;
-        position: fixed;
-        top: 0;
-        right: -30rem;
-        transition: all 1s;
-        z-index: 80;
-        display: flex;
-    }
-      
-    .show-menu aside {
-        right: 0;
-    }
-      
-    .menu {
-        flex-direction: column;
-        position: absolute;
-        top: 30%;
-        left: 35%;
-    }
-      
-    .menu-item {
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
-      
-    .menu-link {
-        font-family: var(--font-action);
-        font-size: 1rem;
-        color: black;
-    }
-      
-    .social-media {
-        position: absolute;
-        bottom: 2rem;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-      
-    .social-media i {
-        background-color: dodgerblue;
-        color: rgba(255, 255, 255, 1);
-        height: 2.5rem;
-        width: 2.5rem;
-        font-size: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        transition: background-color 1s;
-    }
-
-
-      
-}
 
 
 
