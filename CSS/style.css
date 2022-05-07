@@ -424,6 +424,103 @@ footer{
     display: flex;
 }
 
+@media screen and (max-width:700px){
+    header{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        width: 34rem;
+        z-index: 500;
+        position: fixed;
+    }
+    
+    .logo img{
+        width: 6rem;
+    }
+    
+    ul{
+        display: flex;
+        align-items: center;
+    }
+    
+    ul a{
+        flex-direction: row;
+        color: black;
+        font-family: var(--font-primary);
+        text-decoration: none;
+        margin: .8rem 2rem 0 0;
+        align-items: center;
+    }
+    
+    /*--- HOME ---*/
+    
+    .home{
+        display: none;
+    }
+
+    .home-mobile img{
+        margin-top: 5rem;
+        border-radius: 40%;
+        width: 50%;
+        height: 50%;
+        margin-left: 11rem;
+    }
+    
+    .home-mobile aside{
+        margin-left: 9rem;
+        margin-right: -4rem;
+        font-family: var(--font-primary);
+        font-size: 20px;
+    }   
+    
+    span{
+        color: dodgerblue;
+    }
+    
+    .home-mobile a{
+        color: black;
+        font-size: 1.3rem;
+    }
+      
+    .home-mobile ul {
+        margin: 2rem 5rem;
+        justify-content: flex-start;
+        display: flex;
+    }
+    
+    /*--- ABOUT ---*/
+    
+    .title{
+        display: flex;
+        padding: 2rem 16rem;
+        font-family: var(--font-primary);
+        text-decoration: underline dodgerblue 5px;
+        z-index: 700;
+    }
+    
+    .sobre-mim img{
+        display: none;
+    }
+    
+    .sobre-mim .text{
+        margin-right: -7rem;
+        margin-left: 1rem;
+        font-family: var(--font-primary);
+    }
+    
+    /*--- SKILLS ---*/
+    
+    .linguagens{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .linguagens img{
+        visibility: hidden;
+    }
+}
+
 
 
 
