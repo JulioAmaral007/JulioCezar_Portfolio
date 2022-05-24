@@ -47,19 +47,20 @@ header{
 ul{
     display: flex;
     align-items: center;
+    margin-top: .9rem;
 }
 
-ul a{
+li a{
     flex-direction: row;
     color: black;
     font-family: var(--font-primary);
     transition: all 1s;
     text-decoration: none;
-    margin: .8rem 2rem 0 0;
+    padding: .9rem;
     align-items: center;
 }
 
-ul a:hover{
+li a:hover{
     color: blue;
 }
 
