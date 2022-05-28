@@ -435,7 +435,7 @@ footer{
         display: flex;
         justify-content: space-around;
         background-color: white;
-        width: 100vw;
+        width: 100%;
         z-index: 500;
         position: fixed;
     }
@@ -500,7 +500,7 @@ footer{
     }
 
     .sobre-mim .text{
-        width: 90vw;
+        width: 90%;
     }
     
     .linguagens{
@@ -516,7 +516,7 @@ footer{
     }
 
     .linguagens .text2{
-        width: 90vw;
+        width: 90%;
     }
 }
 
