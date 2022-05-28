@@ -22,7 +22,7 @@ html{
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: white;
     width: 100%;
     z-index: 500;
@@ -35,7 +35,6 @@ header{
 }
 
 #title{
-    margin-left: 2rem;
     font-family: var(--font-primary);
 }
 
@@ -57,7 +56,6 @@ li a{
     transition: all 1s;
     text-decoration: none;
     padding: .9rem;
-    align-items: center;
 }
 
 li a:hover{
@@ -69,11 +67,8 @@ li a:hover{
 .home{
     width: 100%;
     display: flex;
+    flex-direction: row-reverse;
     height: auto;
-}
-
-.home aside{
-    align-items: center;
 }
 
 .home aside h1{
@@ -89,8 +84,8 @@ span{
 
 .home img{
     border-radius: 40%;
-    width: 25%;
-    height: 25%;
+    width: auto;
+    height: 25rem;
     padding: 2rem;
     margin: 3rem 2rem 0 9rem;
 }
@@ -432,25 +427,19 @@ footer{
 }
 
 
-@media screen and (max-width:700px){
+@media screen and (max-width:900px){
 
     header{
         display: flex;
-        justify-content: space-around;
         background-color: white;
         width: 100%;
         z-index: 500;
         position: fixed;
+        font-size: medium;
     }
-    
+
     .logo img{
-        width: 6rem;
-        margin-right: 1rem;
-    }
-    
-    ul{
-        display: flex;
-        align-items: center;
+        width: 5rem;
     }
     
     ul a{
@@ -458,25 +447,27 @@ footer{
         color: black;
         font-family: var(--font-primary);
         text-decoration: none;
-        margin: .8rem 2rem 0 0;
-        align-items: center;
     }
     
     /*--- HOME ---*/
 
+    .home{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
     .home img{
         border-radius: 40%;
-        width: 15rem;
-        height: 18rem;
-        margin-left: -19rem;
+        width: auto;
+        height: 12rem;
     }
-    
+
     .home aside h1{
+        padding: 0 5rem;
         line-height: 2rem;
         font-family: var(--font-primary);
-        font-size: 20px;
-        margin-top: 15rem;
-        margin-left: 5rem;
+        font-size: 18px;
     }   
     
     span{
@@ -495,8 +486,6 @@ footer{
     /*--- ABOUT ---*/
 
     .title{
-        display: flex;
-        padding: 2rem 50%;
         font-family: var(--font-primary);
         text-decoration: underline dodgerblue 5px;
         z-index: 700;
@@ -513,7 +502,7 @@ footer{
     .sobre-mim img{
         display: none;
     }
-    
+
     .linguagens img{
         display: none;
     }
