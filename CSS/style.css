@@ -1,6 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 
+:root {
+    --header-height: 3.5rem;
+
+    --first-color: #A192E9;
+    --first-color-hover: #c8c1ee;
+    --first-color-alt: #0B111E;
+    --title-color: #1E90FF;
+    --text-color: #fff;
+    --body-color: #0B111E;
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --font-primary: "Baloo Da 2", serif;
+    --font-secundary:  "Josefin Slab", serif;
+    --font-action: "Mulish", serif;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semibold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -8,50 +42,42 @@
     list-style: none;
 }
 
-:root{
-    --font-primary: "Baloo Da 2", serif;
-    --font-secundary:  "Josefin Slab", serif;
-    --font-action: "Mulish", serif;
-}
-
 html{
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
 /*--- HEADER ---*/
 
-header{
+/*header{
     display: flex;
     justify-content: space-around;
-    background-color: white;
+
+    z-index: var(--z-modal);
+    position: fixed;
+}*/
+
+nav{
     width: 100%;
-    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: var(--header-height);
+    z-index: var(--z-modal);
     position: fixed;
 }
 
-.logo img{
-    width: 8rem;
-    margin: .5rem 0 .5rem 3rem;
-}
-
-#title{
-    font-family: var(--font-primary);
-}
-
-#title a{
-    text-decoration: none;
-    color: black;
-}
-
-ul{
+.nav-list {
     display: flex;
-    align-items: center;
-    margin-top: .9rem;
 }
 
 li a{
     flex-direction: row;
-    color: black;
+    color: var(--first-color);
     font-family: var(--font-primary);
     transition: all 1s;
     text-decoration: none;
@@ -59,7 +85,44 @@ li a{
 }
 
 li a:hover{
-    color: blue;
+    color: var(--first-color-hover);
+    opacity: 0.7;
+}
+  
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+  
+.mobile-menu div {    
+    width: 22px;
+    height: 1px;
+    background: var(--first-color);
+    margin: 7px;
+    transition: 0.3s;
+}
+
+.logo img{
+    width: 5rem;
+    background-color: var(--first-color);
+    border-radius: 15px;
+    padding: 1px;
+}
+
+.nav-list.active {
+transform: translateX(0);
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
 }
 
 /*--- HOME ---*/
@@ -79,7 +142,7 @@ li a:hover{
 }
 
 span{
-    color: dodgerblue;
+    color: var(--title-color);
 }
 
 .home img{
@@ -91,7 +154,7 @@ span{
 }
 
 .home a{
-    color: black;
+    color: var(--first-color);;
     font-size: 1.3rem;
 }
   
@@ -144,11 +207,12 @@ span{
 .sobre-mim img{
     width: 15rem;
     height: 25rem;
+    margin: 5rem;
 }
 
 .sobre-mim .text{
-    width: 40rem;
-    margin-left: 2rem;
+    width: 100%;
+    padding-right: 10rem;
     font-family: var(--font-primary);
 }
 
@@ -192,7 +256,7 @@ span{
 .skills__icon {
   font-size: 2rem;
   margin-right: 1rem;
-  color: black;
+  color: var(--first-color);
 }
   
 .skills__names {
@@ -204,7 +268,7 @@ span{
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: blue;
+  background-color: var(--title-color);
   height: .25rem;
   border-radius: .5rem;
   z-index: -10;
@@ -285,34 +349,35 @@ span{
     font-family: var(--font-primary);
     font-size: 2rem;
     font-weight: 500;
-    color: white;
 }
   
 .card-info h3 {
     font-family: var(--font-action);
     font-weight: bolder;
-    color: dodgerblue;
+    color: var(--first-color);
     margin-bottom: 1.5rem;
 }
   
 .card-info p {
     font-family: var(--font-secundary);
-    color: white;
     font-weight: 400;
     width: 80%;
     margin-bottom: 2rem;
 }
   
-.btn {
-    background: blue;
-    background: -webkit-linear-gradient(to right, dodgerblue, blue);
-    background: linear-gradient(to left, dodgerblue, blue);
+button {
+    background: var(--first-color-alt);
     font-family: var(--font-action);
     color: white;
     border-radius: 0.5rem;
     border: none;
     box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    transition: all 1s;
+}
+
+button:hover{
+    background: var(--first-color);
 }
   
 .card-info button {
@@ -426,27 +491,36 @@ footer{
     font-size: 1.3rem;
 }
 
+.social-list a:hover{
+    color: var(--first-color-hover);
+}
+
 
 @media screen and (max-width:900px){
 
-    header{
-        display: flex;
-        background-color: white;
-        width: 100%;
-        z-index: 500;
-        position: fixed;
-        font-size: medium;
+    body {
+        overflow-x: hidden;
     }
-
-    .logo img{
-        width: 5rem;
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 40vw;
+        height: 20vh;
+        background: var(--first-color-alt);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        border-radius: 20px;
     }
-    
-    ul a{
-        flex-direction: row;
-        color: black;
-        font-family: var(--font-primary);
-        text-decoration: none;
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
     }
     
     /*--- HOME ---*/
@@ -471,11 +545,10 @@ footer{
     }   
     
     span{
-        color: dodgerblue;
+        color: var(--title-color);
     }
     
     .home a{
-        color: black;
         font-size: 1.3rem;
     }
       
@@ -487,12 +560,12 @@ footer{
 
     .title{
         font-family: var(--font-primary);
-        text-decoration: underline dodgerblue 5px;
-        z-index: 700;
+        text-decoration: underline var(--title-color) 5px;
     }
 
     .sobre-mim .text{
-        width: 90%;
+        width: 100%;
+        padding: 1rem;
     }
     
     .linguagens{
@@ -509,6 +582,60 @@ footer{
 
     .linguagens .text2{
         width: 90%;
+    }
+
+    /*--- WORKS ---*/
+      
+    .card {
+        width: 9rem;
+        height: 12rem;
+    }
+      
+    .card-info {
+        padding: .5rem;
+    }
+      
+    .card-info h2 {
+        font-family: var(--font-primary);
+        font-size: var(--normal-font-size);
+    }
+      
+    .card-info h3 {
+        font-size: var(--smaller-font-size);
+        margin-bottom: .5rem;
+    }
+      
+    .card-info p {
+        font-family: var(--font-secundary);
+        font-size: var(--smaller-font-size);
+        margin-bottom: .2rem;
+    }
+
+    button {
+        box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        transition: all 1s;
+        font-size: 10px;
+    }
+      
+    .card-info button {
+        width: 3.5rem;
+        height: 1.5rem;
+    }
+      
+    .card:hover .card-info {
+        bottom: 0rem;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
