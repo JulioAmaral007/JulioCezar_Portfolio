@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="Assets/Images/favicon.png">
     <link href="Assets/CSS/style.css" rel="stylesheet" />
     <script src="Assets/JS/script.js" defer ></script>
+    <script src="Assets/JS/vanilla-tilt.js" ></script>
     
     <!--SEO-->
     <meta name="description" content="Free Web tutorials">
@@ -28,7 +27,7 @@
 
   <header>
     <nav>
-      <a class="logo" href="#home"><img src="Assets/Images/Kira_logo.png"></a>
+      <a class="logo" href="#home"><img src="Assets/Images/logo.png"></a>
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -57,6 +56,8 @@
       </aside>
     </section>
 
+    <!-- About  -->
+
     <section class="about" id="about">
       <div class="title">
         <h2>About</h2>
@@ -75,6 +76,8 @@
         </div>
       </div>
     </section>
+
+    <!--  Skills  -->
 
     <section class="skills" id="skills">
       <div class="title">
@@ -147,6 +150,8 @@
         <img src="Assets/Images/work3.jpg"/>
       </div>
     </section>
+
+    <!--  Works  -->
 
     <section class="works" id="works">
       <div class="title">
@@ -227,6 +232,7 @@
           </div>
         </div>
 
+
       </div>
     </section>
 
@@ -266,6 +272,13 @@
         </div>
       </div>
     </footer>
+
+
+
+    <script>      
+      //It also supports NodeList
+      VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
     
 </body>
 </html>
