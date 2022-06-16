@@ -299,10 +299,56 @@ span{
 }
 
 .projects {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+  position: relative;
+  padding: 15px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+  
+.gallery-wrapper {
+  overflow-x: auto;
+}
+  
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 1rem;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 250px;
+  width: 2rem;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, black 200%);
+  opacity: .5;
+  cursor: pointer;
+  border: none;
+}
+  
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+  
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+  
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+}
+  
+.current-item {
+  opacity: 1;
+}
+  
+.gallery-wrapper::-webkit-scrollbar {
+    display: none; 
 }
   
 .card {
@@ -310,6 +356,9 @@ span{
     height: 25rem;
     position: relative;
     margin: 1rem 2rem 1rem 1rem;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.5;
 }
   
 .card-img-wrapper {
